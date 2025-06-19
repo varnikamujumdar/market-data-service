@@ -17,11 +17,6 @@ public class AlphaVantageProvider implements MarketDataProvider {
     private RestTemplate restTemplate = new RestTemplate();
 
 
-//    public AlphaVantageProvider(RestTemplate restTemplate) {
-//        this.restTemplate = restTemplate;
-//    }
-
-
     @Override
     public PriceResponse fetchPrice(String symbol) throws Exception {
         // call the Aplha Vantage API that fetches the latest price based on the Symbol
