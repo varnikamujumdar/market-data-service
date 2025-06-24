@@ -1,11 +1,13 @@
 package com.example.marketdataservice.repository;
 
-import com.example.marketdataservice.models.MovingAverage;
+import com.example.marketdataservice.models.SymbolAverage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @Repository
-public interface MovingAverageRepository extends JpaRepository<MovingAverage, UUID> {
+public interface SymbolAverageRepository extends JpaRepository<SymbolAverage, UUID> {
+
+
 }

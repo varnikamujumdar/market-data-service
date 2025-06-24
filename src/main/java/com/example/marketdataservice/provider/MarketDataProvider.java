@@ -1,6 +1,6 @@
 package com.example.marketdataservice.provider;
 
-import com.example.marketdataservice.schemas.PriceResponse;
+import com.example.marketdataservice.dto.PriceResponse;
 
 
 public interface MarketDataProvider {

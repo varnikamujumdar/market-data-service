@@ -1,6 +1,6 @@
 package com.example.marketdataservice.provider;
 
-import com.example.marketdataservice.schemas.PriceResponse;
+import com.example.marketdataservice.dto.PriceResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
