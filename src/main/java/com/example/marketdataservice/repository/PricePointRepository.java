@@ -12,6 +12,12 @@ import java.util.UUID;
 @Repository
 public interface PricePointRepository extends JpaRepository<PricePoint, UUID> {
 
-    List<PricePoint> findBySymbolAndProviderAndTimestampBetweenOrderByTimestampAsc(
-            String symbol, String provider, ZonedDateTime start, ZonedDateTime end);
+    // Get the last 4 prices before a given timestamp (for MA calculation)
+    List<PricePoint> findTop4BySymbolAndTimestampLessThanOrderByTimestampDesc(String symbol, ZonedDateTime timestamp);
+
+    // Get the latest price point for API endpoint
+    PricePoint findTopBySymbolOrderByTimestampDesc(String symbol);
+
+    // For history viewing or analytics
+    List<PricePoint> findAllBySymbolOrderByTimestampDesc(String symbol);
 }

@@ -1,6 +1,9 @@
 package com.example.marketdataservice.models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,23 +17,16 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "T_MOVING_AVERAGE")
-public class MovingAverage {
+@Table(name = "T_SYMBOL_AVERAGE")
+public class SymbolAverage {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue
     private UUID id;
 
-    @Column(nullable = false)
     private String symbol;
 
-    @Column(name = "moving_average_value", nullable = false)
-    private Double movingAverageValue;
+    private double movingAverage;
 
-    @Column(nullable = false)
     private ZonedDateTime timestamp;
-
-    @Column(nullable = false)
-    private Integer windowSize;
-
 }

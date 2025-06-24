@@ -1,6 +1,4 @@
-package com.example.marketdataservice.schemas;
-import java.util.List;
-
+package com.example.marketdataservice.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -14,14 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class PollRequest {
+public class PollResponse {
 
+    private String jobId;
 
-    private List<String> symbols;
+    private String status;
 
-    private Integer interval;
-
-    private String provider;
-
-    
+    private ConfigDTO config;
 }

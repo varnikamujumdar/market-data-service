@@ -1,4 +1,4 @@
-package com.example.marketdataservice.schemas;
+package com.example.marketdataservice.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
